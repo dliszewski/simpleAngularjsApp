@@ -1,0 +1,11 @@
+<div class="container"><h2>{{customersdata.name}}'s Books</h2>
+<table class="table">
+    <tr>
+        <th>Edition</th>
+        <th>Author</th>
+    </tr>
+    <tr ng-repeat="book in customersdata.books">
+        <td>{{book.edition}}</td>
+        <td>{{book.author}}</td>
+    </tr>
+</table></div>

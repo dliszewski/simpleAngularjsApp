@@ -1,0 +1,24 @@
+<div class="container"><h2>Customers books</h2>
+Filter: <input type="text" ng-model="orderFilter.author"/>
+<br/><br/>
+
+<table class="table table-striped">
+    <tr>
+        <th>Author</th>
+        <th>Edition</th>
+        <th>Price</th>
+    </tr>
+    <tr ng-repeat="book in allBbooks | filter:orderFilter" class="repeat-animation">
+        <td>{{book.author}}</td>
+        <td>{{book.edition}}</td>
+        <td>{{book.price | currency:'PLN '}}</td>
+    </tr>
+    <tr>
+        <td>Total Price</td>
+        <td>{{booksTotal}}</td>
+    </tr>
+</table>
+<br/>
+<span>Total: customers: {{ customersdata.length}}</span>
+<br/><br/>
+<footer>{{appSettings.version }}</footer></div>
